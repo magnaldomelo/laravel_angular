@@ -12,6 +12,9 @@ import { SignupComponent } from './components/signup/signup.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { RequrestResetComponent } from './components/password/requrest-reset/requrest-reset.component';
 import { ResponseResetComponent } from './components/password/response-reset/response-reset.component';
+import { JarwisService } from './Services/jarwis.service';
+import { TokenService } from './Services/token.service';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +33,7 @@ import { ResponseResetComponent } from './components/password/response-reset/res
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ JarwisService, TokenService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
