@@ -17,7 +17,6 @@ export class TokenService {
 
   set(token){
     localStorage.setItem('token', token);
-    console.log(this.payload(token));
   }
 
   get(){
@@ -49,6 +48,6 @@ export class TokenService {
   }
 
   loggedIn(){
-    this.isValid();
+    return this.isValid();
   }
 }
